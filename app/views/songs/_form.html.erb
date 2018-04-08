@@ -1,9 +1,19 @@
 <%= form_for @song  do |f| %>
+
+
+<%= artist_select(@artist, @song) %>
+
   <%= f.label :title %>
   <%= f.text_field :title %><br>
-  <%= f.label :artist_name %>
-  <%= f.text_field :artist_name %>
-  <br />
+  <br/>
 
   <%= f.submit %>
 <% end %>
+
+<!-- if editing directly from song index:
+  create a drop down of artist_select
+elsif editing through artist
+  display artist name:
+
+
+artist_select(artist, song) -->
